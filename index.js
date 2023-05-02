@@ -5,6 +5,10 @@ const {UserRoute}=require("./Router/User");
 const {PostRoute}=require("./Router/Post");
 require('dotenv').config()
 app.use(express.json());
+app.get("/",(req,res)=>{
+    res.send("mock has been deployed")
+})
+
 app.use(UserRoute);
 app.use(PostRoute)
 
